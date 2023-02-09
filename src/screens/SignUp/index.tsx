@@ -6,7 +6,7 @@ import React from "react";
 import { Input } from "~/components/Input";
 import { Button } from "~/components/Button";
 
-export function SignIn() {
+export function SignUp() {
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -29,9 +29,10 @@ export function SignIn() {
 
         <Center>
           <Heading mb={6} fontFamily="heading" fontSize="xl" color="gray.100">
-            Acesse sua conta
+            Crie sua conta
           </Heading>
 
+          <Input placeholder="Nome" />
           <Input
             placeholder="E-mail"
             keyboardType="email-address"
@@ -39,15 +40,10 @@ export function SignIn() {
           />
           <Input placeholder="Senha" secureTextEntry />
 
-          <Button title="Acessar" />
+          <Button title="Criar e acessar" />
         </Center>
 
-        <Center mt={24}>
-          <Text color="gray.100" fontSize="sm" mb={3} fontFamily="body">
-            Ainda não tem acesso?
-          </Text>
-          <Button title="Criar conta" variant="outline" />
-        </Center>
+        <Button mt={24} title="Voltar para login" variant="outline" />
       </VStack>
     </ScrollView>
   );
